@@ -89,13 +89,14 @@
 --reference:C:\Users\v-xujren\.nuget\packages\System.Threading.Timer\4.0.1-rc2-24027\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\v-xujren\.nuget\packages\System.Xml.ReaderWriter\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\v-xujren\.nuget\packages\System.Xml.XDocument\4.0.11-rc2-24027\ref\netstandard1.3\System.Xml.XDocument.dll
-E:\DotNetCore\DependencyInjection\Class.cs
 E:\DotNetCore\DependencyInjection\ConstructorInfo.cs
 E:\DotNetCore\DependencyInjection\FactoryCallSite.cs
 E:\DotNetCore\DependencyInjection\InstanceCallSite.cs
 E:\DotNetCore\DependencyInjection\IService.cs
 E:\DotNetCore\DependencyInjection\IServiceCallSite.cs
 E:\DotNetCore\DependencyInjection\IServiceCollection.cs
+E:\DotNetCore\DependencyInjection\IServiceScope.cs
+E:\DotNetCore\DependencyInjection\IServiceScopeFactory.cs
 E:\DotNetCore\DependencyInjection\Program.cs
 E:\DotNetCore\DependencyInjection\ScopedCallSite.cs
 E:\DotNetCore\DependencyInjection\Service.cs
@@ -106,5 +107,8 @@ E:\DotNetCore\DependencyInjection\ServiceEntity.cs
 E:\DotNetCore\DependencyInjection\ServiceLifetime.cs
 E:\DotNetCore\DependencyInjection\ServiceProvider.cs
 E:\DotNetCore\DependencyInjection\ServiceProviderExtensions.cs
+E:\DotNetCore\DependencyInjection\ServiceScope.cs
+E:\DotNetCore\DependencyInjection\ServiceScopeFactory.cs
 E:\DotNetCore\DependencyInjection\ServiceTable.cs
+E:\DotNetCore\DependencyInjection\SingletonCallSite.cs
 E:\DotNetCore\DependencyInjection\TransientCallSite.cs

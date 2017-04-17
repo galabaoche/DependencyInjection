@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DependencyInjection
 {
-    public class ServiceScope : IServiceScope
+    internal class ServiceScope : IServiceScope
     {
         private readonly ServiceProvider _scopedProvider;
         public ServiceScope(ServiceProvider scopedProvider)

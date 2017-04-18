@@ -17,6 +17,7 @@ namespace DependencyInjection
         internal ServiceProvider(ServiceProvider parent)
         {
             Root = parent.Root;
+            this.ServiceTable = parent.ServiceTable;
         }
         public ServiceProvider(IServiceCollection services)
         {
@@ -61,7 +62,14 @@ namespace DependencyInjection
                     return serviceEntry.Last.CreateCallSite(this, callSiteChain);
                 }
 
-                //省略其他代码
+                if (serviceType.IsConstructedGenericType && serviceType.GetGenericTypeDefinition() == typeof(IEnumerable<>))
+                                {
+                                    Type elementType = serviceType.GenericTypeArguments[0];
+                                    IServiceCallSite[] serviceCallSites = this.ServiceTable.ServieEntries.TryGetValue(elementType, out serviceEntry)
+                                        ? serviceEntry.All.Select(it => it.CreateCallSite(this, callSiteChain)).ToArray()
+                                        : new IServiceCallSite[0];
+                                    return new EnumerableCallSite(elementType, serviceCallSites);
+                                }
 
                 return null;
             }
@@ -91,14 +99,5 @@ namespace DependencyInjection
         }
     }
 
-    public static class CollectionExtend
-    {
-        public static void Foreach<T>(this IEnumerable<T> sources, Action<T> action)
-        {
-            foreach (var e in sources)
-            {
-                action(e);
-            }
-        }
-    }
+   
 }

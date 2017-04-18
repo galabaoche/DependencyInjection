@@ -15,7 +15,7 @@ namespace DependencyInjection
 
         public void Dispose()
         {
-            _scopedProvider.Dispose();
+            (this.ServiceProvider as IDisposable)?.Dispose();
         }
 
         public IServiceProvider ServiceProvider

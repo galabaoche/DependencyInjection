@@ -22,7 +22,7 @@ namespace DependencyInjection
        {
            this.Last.Next = service;
            this.Last = service;
-           this.Add(service);
+           this.All.Add(service);
        }
    }
 }
